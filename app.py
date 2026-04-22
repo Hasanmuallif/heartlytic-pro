@@ -87,7 +87,7 @@ with st.sidebar:
         st_lottie(lottie_heart, height=150, key="heart_sidebar")
     
     st.markdown("<h2 style='text-align: center; letter-spacing: 2px;'>HEARTLYTIC <span style='var(--text-color);font-weight: bold;'>PRO</span></h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; font-size: 0.8rem; color: #888;'>Professional Edition</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; font-size: 0.8rem; color: #888;'>AI Cardiac Analytics</p>", unsafe_allow_html=True)
     st.markdown("---")
     
     st.markdown("""
@@ -111,8 +111,8 @@ with st.sidebar:
     st.caption("© 2026 Heartlytic | Portofolio Data Science")
 
 # --- HEADER UTAMA ---
-st.markdown("<h1 style='text-align: left; color: var(--text-color);'>Heart Attack Intelligence</h1>", unsafe_allow_html=True)
-st.markdown("<p style='font-size: 1.1rem; color: #6b7280; border-left: 4px solid #FF4B4B; padding-left: 15px;'>Sistem Analisis Prediktif Berbasis Kecerdasan Buatan</p>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: left; color: var(--text-color);'>Heart Attack Risk Prediction</h1>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 1.1rem; color: #6b7280; border-left: 4px solid #FF4B4B; padding-left: 15px;'>Advanced AI-Driven Heart Attack Risk Prediction</p>", unsafe_allow_html=True)
 st.divider()
 
 # --- FORM INPUT ---
