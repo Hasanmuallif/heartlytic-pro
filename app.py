@@ -85,14 +85,14 @@ lottie_heart = load_lottie("https://lottie.host/80e72251-872c-4614-a957-30e71358
 with st.sidebar:
     st.markdown(
         """
-        <div style="margin-top: -60px;"> 
+        <div style="margin-top: -10px;"> 
         """, 
         unsafe_allow_html=True
     )
     st.image("logo.png", use_container_width=True)
     st.markdown("</div>", unsafe_allow_html=True)
     if lottie_heart:
-        st_lottie(lottie_heart, height=50, key="heart_sidebar")
+        st_lottie(lottie_heart, height=150, key="heart_sidebar")
 
     st.markdown(
         f"""<h2 style='text-align: center; letter-spacing: 2px; color: #FF4B4B; margin-top: -80px; margin-bottom: 0px;'> HEARTLYTIC <span style='color: var(--text-color); font-weight: bold;'>PRO</span></h2>
