@@ -95,13 +95,13 @@ with st.sidebar:
         st_lottie(lottie_heart, height=150, key="heart_sidebar")
 
     st.markdown(
-        f"""<h2 style='text-align: center; letter-spacing: 2px; color: #FF4B4B; margin-top: -45px; margin-bottom: 0px;'> HEARTLYTIC <span style='color: var(--text-color); font-weight: bold;'>PRO</span></h2>
+        f"""<h2 style='text-align: center; letter-spacing: 2px; color: #FF4B4B; margin-top: -90px; margin-bottom: 0px;'> HEARTLYTIC <span style='color: var(--text-color); font-weight: bold;'>PRO</span></h2>
         """, unsafe_allow_html=True)
     st.markdown(
-        "<p style='text-align: center; font-size: 0.8rem; color: #888; margin-top: -60px;'>"
+        "<p style='text-align: center; font-size: 0.8rem; color: #888; margin-top: -70px;'>"
         "AI Cardiac Analytics</p>", 
         unsafe_allow_html=True)
-    st.markdown("---")
+    st.markdown("--")
     
     st.markdown("""
         <div class="sidebar-card">
