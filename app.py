@@ -101,7 +101,8 @@ with st.sidebar:
         "<p style='text-align: center; font-size: 0.8rem; color: #888; margin-top: -70px;'>"
         "AI Cardiac Analytics</p>", 
         unsafe_allow_html=True)
-    st.markdown("---")
+
+   st.markdown("<hr style='margin-top: 5px; margin-bottom: 20px;'>", unsafe_allow_html=True)
     
     st.markdown("""
         <div class="sidebar-card">
