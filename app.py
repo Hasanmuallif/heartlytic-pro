@@ -153,11 +153,11 @@ with st.form("prediction_form"):
 if submit:
     #_Validasi Input Kritis_
     errors = []
-    if sys_bp > 250 or sys_bp < 80:
+    if sys_bp > 250 and sys_bp < 80:
         errors.append("Tekanan Darah Sistolik tidak valid (Rentang: 80-250 mmHg)")
-    if dia_bp > 150 or dia_bp < 40:
+    if dia_bp > 150 and dia_bp < 40:
         errors.append("Tekanan Darah Diastolik tidak valid (Rentang: 40-150 mmHg)")
-    if chol > 500 or chol < 100:
+    if chol > 500 and chol < 100:
         errors.append("Kadar Kolesterol tidak valid (Rentang: 100-500 mg/dL)")
     #_Cek Apakah Ada Error
     if errors:
