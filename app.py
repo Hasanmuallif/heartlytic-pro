@@ -85,7 +85,7 @@ lottie_heart = load_lottie("https://lottie.host/80e72251-872c-4614-a957-30e71358
 with st.sidebar:
     st.markdown(
         """
-        <div style="margin-top: -30px;"> 
+        <div style="margin-top: -60px;"> 
         """, 
         unsafe_allow_html=True
     )
