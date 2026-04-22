@@ -148,7 +148,6 @@ with st.form("prediction_form"):
                 st.error(f"🚨 Status: **Obesitas** (BMI: {bmi_input})")
                 obesity_status = 1 # Nilai ini yang akan dikirim ke model
             
-            st.markdown("---")
             diabetes = st.segmented_control("Riwayat Diabetes", options=["Tidak", "Ya"], default="Tidak")
             obesity_status = 1 if bmi_input > 30 else 0
             
