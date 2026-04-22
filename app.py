@@ -99,7 +99,7 @@ with st.sidebar:
         </div>
     """, unsafe_allow_html=True)
     
-    with st.expander("📖 Panduan Penggunaan Aplikasi"):
+    with st.expander("📖 Panduan Penggunaan"):
         st.markdown("""
             <div style='font-size: 0.85rem;'>
             1. Isi <b>Indikator Klinis</b> sesuai hasil laboratorium.<br><br>
