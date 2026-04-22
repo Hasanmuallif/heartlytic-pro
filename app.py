@@ -151,6 +151,20 @@ with st.form("prediction_form"):
 
 # --- LOGIKA VALIDASI & OUTPUT ---
 if submit:
+    #_Validasi Input Kritis_
+    errors = []
+    if sys_bp > 250 or sys_bp < 80:
+        errors.append("Tekanan Darah Sistolik tidak valid (Rentang: 80-250 mmHg)")
+    if dia_bp > 150 or dia_bp < 40:
+        errors.append("Tekanan Darah Diastolik tidak valid (Rentang: 40-150 mmHg)")
+    if chol > 500 or chol < 100:
+        errors.append("Kadar Kolesterol tidak valid (Rentang: 100-500 mg/dL)")
+    #_Cek Apakah Ada Error
+    if errors:
+        for err in errors:
+            st.error(f"❌ {err}")
+        st.stop()
+    #_Jika Valid, Jalankan Model
     if model:
         # Default value untuk fitur yang dihapus/tidak diinput user
         input_data = {feat: 0 for feat in all_features}
