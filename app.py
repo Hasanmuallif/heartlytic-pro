@@ -79,6 +79,14 @@ with st.sidebar:
             </p>
         </div>
     """, unsafe_allow_html=True)
+with st.expander("📖 Cara Prediksi"):
+        st.markdown("""
+            <div style='font-size: 0.85rem;'>
+            1. Isi <b>Indikator Klinis</b> sesuai hasil laboratorium.<br><br>
+            2. Lengkapi <b>Profil Gaya Hidup</b>.<br><br>
+            3. Sistem akan menghitung skor probabilitas secara real-time.
+            </div>
+        """, unsafe_allow_html=True)
     
     st.caption("© 2026 Heartlytic | Portofolio Data Science")
 
