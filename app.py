@@ -88,7 +88,7 @@ with st.expander("📖 Cara Prediksi"):
             </div>
         """, unsafe_allow_html=True)
     
-    st.caption("© 2026 Heartlytic | Portofolio Data Science")
+st.caption("© 2026 Heartlytic | Portofolio Data Science")
 
 # --- HEADER UTAMA ---
 st.markdown("<h1 style='text-align: left; color: var(--text-color);'>Heart Attack Intelligence</h1>", unsafe_allow_html=True)
