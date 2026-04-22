@@ -220,16 +220,38 @@ if submit:
 
         df_input = pd.DataFrame([input_data])[all_features]
         probability = model.predict_proba(df_input)[0][1]
-        prediction = 1 if probability > 0.5 else 0
+        if probability < 0.3:
+            status_risiko = "RENDAH"
+            urgensi = "Aman"
+            pesan_hasil = "✅ Parameter Anda saat ini menunjukkan profil risiko rendah."
+            tipe_notif = "success"
+        elif 0.3 <= probability < 0.6:
+            status_risiko = "MODERAT"
+            urgensi = "Waspada"
+            pesan_hasil = "⚠️ Risiko moderat terdeteksi. Disarankan untuk mulai memperbaiki gaya hidup."
+            tipe_notif = "warning"
+        else:
+            status_risiko = "TINGGI"
+            urgensi = "Kritis"
+            pesan_hasil = "🚨 Risiko tinggi terdeteksi. Segera konsultasikan hasil ini dengan dokter spesialis jantung."
+            tipe_notif = "error"
 
         st.subheader("📊 Hasil Analisis")
         r1, r2, r3 = st.columns(3)
-        with r1: st.metric("Status Risiko", "TINGGI" if prediction == 1 else "RENDAH")
-        with r2: st.metric("Skor Probabilitas", f"{probability:.1%}")
+        with r1: 
+            st.metric("Status Risiko", "TINGGI" if prediction == 1 else "RENDAH")
+        with r2: 
+            st.metric("Skor Probabilitas", f"{probability:.1%}")
         with r3: 
-            urg = "Aman" if probability < 0.2 else "Waspada" if probability < 0.5 else "Kritis"
-            st.metric("Level Urgensi", urg)
-        
+            st.metric("Level Urgensi", urgensi)
+
+        if tipe_notif == "success":
+            st.success(pesan_hasil)
+        elif tipe_notif == "warning":
+            st.warning(pesan_hasil)
+        else:
+            st.error(pesan_hasil)
+            
         st.progress(probability)
         if prediction == 1:
             st.error("🚨 Segera konsultasikan hasil ini dengan dokter spesialis jantung.")
