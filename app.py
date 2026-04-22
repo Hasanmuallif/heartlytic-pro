@@ -85,7 +85,7 @@ lottie_heart = load_lottie("https://lottie.host/80e72251-872c-4614-a957-30e71358
 with st.sidebar:
     st.markdown(
         """
-        <div style="margin-top: -10px;"> 
+        <div style="margin-top: -30px;"> 
         """, 
         unsafe_allow_html=True
     )
@@ -95,13 +95,13 @@ with st.sidebar:
         st_lottie(lottie_heart, height=150, key="heart_sidebar")
 
     st.markdown(
-        f"""<h2 style='text-align: center; letter-spacing: 2px; color: #FF4B4B; margin-top: -90px; margin-bottom: 0px;'> HEARTLYTIC <span style='color: var(--text-color); font-weight: bold;'>PRO</span></h2>
+        f"""<h2 style='text-align: center; letter-spacing: 2px; color: #FF4B4B; margin-top: -95px; margin-bottom: 0px;'> HEARTLYTIC <span style='color: var(--text-color); font-weight: bold;'>PRO</span></h2>
         """, unsafe_allow_html=True)
     st.markdown(
         "<p style='text-align: center; font-size: 0.8rem; color: #888; margin-top: -70px;'>"
         "AI Cardiac Analytics</p>", 
         unsafe_allow_html=True)
-    st.markdown("--")
+    st.markdown("---")
     
     st.markdown("""
         <div class="sidebar-card">
