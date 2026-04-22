@@ -238,10 +238,8 @@ if submit:
 
         st.subheader("📊 Hasil Analisis")
         r1, r2, r3 = st.columns(3)
-        with r1: 
-            st.metric("Status Risiko", "TINGGI" if prediction == 1 else "RENDAH")
-        with r2: 
-            st.metric("Skor Probabilitas", f"{probability:.1%}")
+        with r1: st.metric("Status Risiko", "TINGGI" if prediction == 1 else "RENDAH")
+        with r2: st.metric("Skor Probabilitas", f"{probability:.1%}")
         with r3: 
             st.metric("Level Urgensi", urgensi)
 
