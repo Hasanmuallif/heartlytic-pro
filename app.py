@@ -79,12 +79,14 @@ def load_resources():
     return model, features
 
 model, all_features = load_resources()
-
+lottie_heart = load_lottie("https://lottie.host/80e72251-872c-4614-a957-30e713589b21/HqQ6h72WzZ.json")
 
 # --- SIDEBAR ---
 with st.sidebar:
     st.image("logo.png", use_container_width=True)
-    
+    if lottie_heart:
+        st_lottie(lottie_heart, height=100, key="heart_sidebar")
+            
     st.markdown(
         f"""<h2 style='text-align: center; letter-spacing: 2px; color: #FF4B4B; margin-top: -80px; margin-bottom: 0px;'> HEARTLYTIC <span style='color: var(--text-color); font-weight: bold;'>PRO</span></h2>
         """, unsafe_allow_html=True)
