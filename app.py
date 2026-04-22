@@ -136,7 +136,7 @@ with st.form("prediction_form"):
             bmi_input = st.number_input("Indeks Massa Tubuh (BMI)", 10.0, 60.0, 24.0, step=0.1)
             # --- LOGIKA FEEDBACK BMI ---
             if bmi_input < 18.5:
-                st.info(f"💡 Status: **Berat Badan Kurang**")
+                st.info(f"🦴 Status: **Berat Badan Kurang**")
                 obesity_status = 0
             elif 18.5 <= bmi_input <= 25.0:
                 st.success(f"✅ Status: **Berat Badan Ideal**")
