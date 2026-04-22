@@ -87,8 +87,13 @@ with st.sidebar:
     if lottie_heart:
         st_lottie(lottie_heart, height=150, key="heart_sidebar")
     
-    st.markdown("<h2 style='text-align: center; letter-spacing: 2px;'>HEARTLYTIC <span style='var(--text-color);font-weight: 800;'>PRO</span></h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; font-size: 0.8rem; color: #888;'>AI Cardiac Analytics</p>", unsafe_allow_html=True)
+    st.markdown(
+        f"""<h2 style='text-align: center; letter-spacing: 2px; color: #FF4B4B; margin-top: -20px; margin-bottom: 0px;'> HEARTLYTIC <span style='color: var(--text-color); font-weight: bold;'>PRO</span></h2>
+        """, unsafe_allow_html=True)
+    st.markdown(
+        "<p style='text-align: center; font-size: 0.8rem; color: #888; margin-top: -10px;'>"
+        "AI Cardiac Analytics</p>", 
+        unsafe_allow_html=True)
     st.markdown("---")
     
     st.markdown("""
