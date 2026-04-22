@@ -83,7 +83,7 @@ lottie_heart = load_lottie("https://lottie.host/80e72251-872c-4614-a957-30e71358
 
 # --- SIDEBAR ---
 with st.sidebar:
-     st.image("logo.png", use_container_width=True)
+    st.image("logo.png", use_container_width=True)
     if lottie_heart:
         st_lottie(lottie_heart, height=150, key="heart_sidebar")
     
