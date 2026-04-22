@@ -134,6 +134,21 @@ with st.form("prediction_form"):
             chol = st.number_input("Total Kolesterol (mg/dL)", 100, 500, 190)
         with c4:
             bmi_input = st.number_input("Indeks Massa Tubuh (BMI)", 10.0, 60.0, 24.0, step=0.1)
+            # --- LOGIKA FEEDBACK BMI ---
+            if bmi_input < 18.5:
+                st.info(f"💡 Status: **Berat Badan Kurang** (BMI: {bmi_input})")
+                obesity_status = 0
+            elif 18.5 <= bmi_input <= 25.0:
+                st.success(f"✅ Status: **Berat Badan Ideal** (BMI: {bmi_input})")
+                obesity_status = 0
+            elif 25.1 <= bmi_input <= 29.9:
+                st.warning(f"⚠️ Status: **Kelebihan Berat Badan** (BMI: {bmi_input})")
+                obesity_status = 0
+            else:
+                st.error(f"🚨 Status: **Obesitas** (BMI: {bmi_input})")
+                obesity_status = 1 # Nilai ini yang akan dikirim ke model
+            
+            st.markdown("---")
             diabetes = st.segmented_control("Riwayat Diabetes", options=["Tidak", "Ya"], default="Tidak")
             obesity_status = 1 if bmi_input > 30 else 0
             
