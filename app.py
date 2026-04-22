@@ -149,7 +149,7 @@ with st.form("prediction_form"):
                 obesity_status = 1
             
             diabetes = st.segmented_control("Riwayat Diabetes", options=["Tidak", "Ya"], default="Tidak")
-            obesity_status = 1 if bmi_input > 30 else 0
+            
             
     with tab3:
         c5, c6 = st.columns(2)
