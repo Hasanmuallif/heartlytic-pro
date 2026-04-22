@@ -52,8 +52,25 @@ st.markdown("""
     [data-testid="stSidebar"] .stMarkdown {
         color: var(--text-color);
     }
+    
     </style>
     """, unsafe_allow_html=True)
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                               url("https://id.pinterest.com/pin/696721004899668632/");
+             background-attachment: fixed;
+             background-size: cover;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url()
 
 # --- 2. LOAD ASSETS & MODEL ---
 def load_lottie(url):
