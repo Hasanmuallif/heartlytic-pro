@@ -79,7 +79,7 @@ def load_resources():
     return model, features
 
 model, all_features = load_resources()
-lottie_heart = load_lottie("https://lottie.host/80e72251-872c-4614-a957-30e713589b21/HqQ6h72WzZ.json")
+
 
 # --- SIDEBAR ---
 with st.sidebar:
