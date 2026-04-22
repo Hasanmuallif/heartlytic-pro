@@ -83,10 +83,11 @@ lottie_heart = load_lottie("https://lottie.host/80e72251-872c-4614-a957-30e71358
 
 # --- SIDEBAR ---
 with st.sidebar:
+     st.image("logo.png", use_container_width=True)
     if lottie_heart:
         st_lottie(lottie_heart, height=150, key="heart_sidebar")
     
-    st.markdown("<h2 style='text-align: center; letter-spacing: 2px;'>HEARTLYTIC <span style='var(--text-color);font-weight: bold;'>PRO</span></h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; letter-spacing: 2px;'>HEARTLYTIC <span style='var(--text-color);font-weight: 800;'>PRO</span></h2>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; font-size: 0.8rem; color: #888;'>AI Cardiac Analytics</p>", unsafe_allow_html=True)
     st.markdown("---")
     
