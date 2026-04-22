@@ -227,7 +227,7 @@ if submit:
         with r1: st.metric("Status Risiko", "TINGGI" if prediction == 1 else "RENDAH")
         with r2: st.metric("Skor Probabilitas", f"{probability:.1%}")
         with r3: 
-            urg = "Aman" if probability < 0.3 else "Waspada" if probability < 0.7 else "Kritis"
+            urg = "Aman" if probability < 0.2 else "Waspada" if probability < 0.5 else "Kritis"
             st.metric("Level Urgensi", urg)
         
         st.progress(probability)
